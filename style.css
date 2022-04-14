@@ -115,3 +115,14 @@ body {
 .footer a {
   color: lightblue;
 }
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .header ul {
+    margin-top: 20px;
+  }
+}
