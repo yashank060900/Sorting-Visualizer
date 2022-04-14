@@ -6,7 +6,7 @@ createNewArray();
 
 // to create new Array input size of array
 // here 60 is default value
-function createNewArray(noOfBars = 45) {
+function createNewArray(noOfBars = 40) {
   // calling helper function to delete old bars from dom
   deleteChild();
 
@@ -14,7 +14,7 @@ function createNewArray(noOfBars = 45) {
   array = [];
 
   for (let i = 0; i < noOfBars; i++) {
-    array.push(Math.floor(Math.random() * 250) + 1);
+    array.push(Math.floor(Math.random() * 200) + 1);
   }
 
   console.log(array);
@@ -25,10 +25,11 @@ function createNewArray(noOfBars = 45) {
   // Create multiple element div using loop and adding class 'bar col'
   for (let i = 0; i < noOfBars; i++) {
     const bar = document.createElement("div");
-    bar.style.height = `${array[i] * 2}px`;
+    bar.style.height = `${array[i] * 2 + 50}px`;
     bar.classList.add("bar");
     bar.classList.add("flex-item");
-    bar.classList.add(`barNo${i}`);
+    // bar.innerHTML = bar.style.height;
+    // bar.classList.add(`barNo${i}`);
     bars.appendChild(bar);
   }
 }

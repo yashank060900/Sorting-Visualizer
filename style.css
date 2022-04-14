@@ -1,33 +1,117 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  padding: 0 20px 30px 0;
-  line-height: 1.4;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@338&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.flex-container {
-  margin-top: 40px;
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: rgb(63, 63, 252);
+  color: white;
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.navbar h1 {
+  padding-bottom: 15px;
+}
+
+.header {
+  background-color: rgb(241, 241, 252);
+}
+
+.header button {
+  border: none;
+  padding: 8px;
+  background-color: rgb(223, 223, 250);
+  border-radius: 10px;
+  font-size: 14px;
+  color: rgb(63, 63, 252);
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: rgb(63, 63, 252);
+  color: white;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  /* flex-wrap: wrap; */
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li {
+  margin-right: 5px;
+}
+
+.size-btn {
+  display: flex;
+  align-items: center;
+}
+.speed-btn {
+  display: flex;
+  align-items: center;
+}
+
+.bars-container .container {
+  margin: 15px auto;
+  max-width: 90%;
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
-  height: 500px;
   justify-content: center;
   transition: 2s all ease;
+  /* height: 600px; */
 }
 
 .flex-item {
-  background: cyan;
-  border: 1pt solid black;
-  width: 45px;
+  width: 20px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: 2px 4px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-self: flex-end;
   transition: 0.1s all ease;
 }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+.footer {
+  text-align: center;
+  background-color: rgb(34, 31, 31);
+  padding: 14px;
+  color: aliceblue;
 }
 
-#input {
-  display: flex;
-  padding: 10px;
-  justify-content: space-around;
+.footer a {
+  color: lightblue;
 }
