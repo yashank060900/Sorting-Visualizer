@@ -74,10 +74,11 @@ newArray.addEventListener("click", function () {
 // swap function util for sorting algorithms takes input of 2 DOM elements with .style.height feature
 function swap(el1, el2) {
   console.log("In swap()");
-
   let temp = el1.style.height;
   el1.style.height = el2.style.height;
+  el1.innerHTML = el1.style.height.replace(/[^0-9\.]+/g, "");
   el2.style.height = temp;
+  el2.innerHTML = el2.style.height.replace(/[^0-9\.]+/g, "");
 }
 
 // Disables sorting buttons used in conjunction with enable, so that we can disable during sorting and enable buttons after it
@@ -126,3 +127,27 @@ function waitforme(milisec) {
     }, milisec);
   });
 }
+
+// const smallDevice = window.matchMedia("(min-width: 576px)");
+
+// smallDevice.addListener(handleDeviceChange);
+
+// function handleDeviceChange(e) {
+//   if (e.matches) {
+//     // outputElement.textContent = "Bigger Than Mobile";
+//     console.log("bigger");
+//     const arraySize = document.querySelector("#arr_sz");
+//     createNewArray();
+//     arraySize.value = 40;
+//     arraySize.max = 50;
+//   } else {
+//     console.log("smaller");
+//     const arraySize = document.querySelector("#arr_sz");
+//     arraySize.value = 20;
+//     arraySize.max = 20;
+//     createNewArray(20);
+//   }
+// }
+
+// // Run it initially
+// handleDeviceChange(smallDevice);

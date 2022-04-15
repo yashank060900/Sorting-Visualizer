@@ -94,13 +94,14 @@ body {
 }
 
 .flex-item {
-  width: 20px;
+  width: 24px;
   background-color: brown;
   color: white;
   text-align: center;
   margin: 2px 4px;
   padding-bottom: 10px;
   padding-top: 10px;
+  font-size: 10px;
   align-self: flex-end;
   transition: 0.1s all ease;
 }
