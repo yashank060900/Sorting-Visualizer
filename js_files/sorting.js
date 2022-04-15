@@ -28,7 +28,7 @@ function createNewArray(noOfBars = 40) {
     bar.style.height = `${array[i] * 2 + 50}px`;
     bar.classList.add("bar");
     bar.classList.add("flex-item");
-    // bar.innerHTML = bar.style.height;
+    bar.innerHTML = bar.style.height.replace(/[^0-9\.]+/g, "");
     // bar.classList.add(`barNo${i}`);
     bars.appendChild(bar);
   }
